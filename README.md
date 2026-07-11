@@ -11,14 +11,23 @@
 
 ---
 
-## ⚠️ Sobre este repositorio
+## Sobre este repositorio
 
-Este es un repositorio **público de portafolio**: contiene documentación, capturas y
-explicación técnica del proyecto, pero **no incluye el código fuente**. El código vive
-en un repositorio privado. Esto es intencional — la app está publicada en tiendas /
-distribución directa y el código fuente no es de libre descarga.
+MisGastos es una aplicación **en producción**, con base de usuarios activa y stack
+completo (app móvil + backend + integraciones de terceros + CI/CD sobre EAS). El
+código fuente y la infraestructura corren en repositorios privados por política de
+propiedad intelectual — el mismo criterio que aplicaría cualquier producto comercial
+antes de exponer su implementación.
 
-¿Quieres ver el código, una demo en vivo, o hablar de una colaboración? Contáctame.
+Este repositorio documenta la arquitectura, las decisiones técnicas y el
+funcionamiento real del sistema (con capturas del dispositivo, no mockups), pensado
+para evaluar profundidad técnica: diseño offline-first con sincronización
+conflict-safe, realtime bidireccional, integraciones OAuth/FCM/Sheets y un modelo de
+monetización freemium funcionando de punta a punta.
+
+**¿Evaluando para una posición, una colaboración técnica, o acceso al código para
+due diligence?** Escríbeme — puedo dar acceso puntual al repo privado o una demo en
+vivo del sistema completo.
 
 ---
 
@@ -114,14 +123,15 @@ Space Grotesk (títulos) + Nunito (cuerpo).
 
 ---
 
-## Seguridad y privacidad de este repo
+## Manejo de código y datos
 
-- El código fuente completo vive en un repositorio **privado** (backup + desarrollo).
-- Este repositorio público **no acepta pull requests de código** — es solo
-  documentación.
-- Las capturas usan datos reales de una cuenta de prueba; no exponen credenciales,
-  tokens ni información de terceros.
+- Implementación completa (app + Edge Functions + esquema de base de datos) en
+  repositorio privado con historial de versiones desde v1.0.
+- Este repositorio no recibe issues ni PRs de código — es material técnico de
+  referencia.
+- Las capturas corresponden a una cuenta real en uso, no a datos ficticios ni
+  mockups de diseño; no exponen credenciales, tokens ni datos de terceros.
 
 ---
 
-<p align="center">Proyecto personal en desarrollo activo — 2026.</p>
+<p align="center">MisGastos — en producción, desarrollo activo · 2026.</p>
