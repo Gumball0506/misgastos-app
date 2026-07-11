@@ -54,7 +54,40 @@ Space Grotesk (títulos) + Nunito (cuerpo).
 |:---:|:---:|
 | <img src="screenshots/04-ajustes.png" width="220"/> | <img src="screenshots/05-nuevo-gasto.png" width="220"/> |
 
-*Capturas tomadas directo del dispositivo, con datos reales de uso.*
+*Capturas tomadas directo del dispositivo, con datos reales de uso — la de Reportes
+muestra la vista **Premium** desbloqueada.*
+
+---
+
+## Modelo Gratis / Premium
+
+Freemium **sin pasarela de pago**: el plan vive en `profiles.plan` (Supabase), el
+cliente lo lee al arrancar y además se suscribe por **Realtime** — el upgrade se
+refleja en el celular del usuario en segundos, sin cerrar la app, con notificación
+push de confirmación. La conversión se resuelve por WhatsApp y la activación es una
+edición de fila (`plan='premium'`, `plan_expira_at`), protegida por Row Level
+Security en el backend.
+
+| Función | 🦊 Gratis | 👑 Premium (S/9.90/mes) |
+|---|:---:|:---:|
+| Registro de gastos / ingresos / futuros | ✓ | ✓ |
+| Gastos recurrentes | hasta 3 | ilimitados |
+| Amigos conectados | hasta 3 | ilimitados |
+| Reportes básicos (categoría, historial) | ✓ | ✓ |
+| Predicciones IA de gasto | ✗ | ✓ |
+| Gráfico de tendencia 30 días + proyección vs. presupuesto | ✗ | ✓ |
+| Ranking de gasto compartido | ✗ | ✓ |
+| Notificaciones personalizadas | ✗ | ✓ |
+| Sincronización con Google Sheets | ✗ | ✓ |
+| Exportar CSV / PDF | ✗ | ✓ |
+| Múltiples fuentes de ingreso | ✗ | ✓ |
+| Logros y racha (gamificación) | ✓ | ✓ |
+
+**Cómo se aplica el límite en el cliente:**
+- `PaywallGate` — overlay visual que bloquea una sección Premium completa (ej. panel
+  de Reportes avanzado, visto en la captura de arriba antes de activar el plan).
+- `useFeatureLimit` — guarda a nivel de acción (ej. intentar crear un 4º amigo en
+  plan Gratis dispara un `Alert` con CTA directo a WhatsApp).
 
 ---
 
