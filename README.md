@@ -39,7 +39,7 @@ Incluye deudas entre amigos conectados en tiempo real, notificaciones push,
 integración con Google Sheets, predicciones de gasto, gamificación (logros/racha) y
 modelo freemium (Gratis / Premium).
 
-**Identidad visual:** verde bosque `#1B2D27`, mascota zorro 🦊, tipografía
+**Identidad visual:** naranja/crema `#E8763A`, mascota zorro 🦊, tipografía
 Space Grotesk (títulos) + Nunito (cuerpo).
 
 ---
